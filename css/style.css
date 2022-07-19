@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -10,7 +11,7 @@ html{
     --textColor:#fff;
 }
 body{
-    font-family:"","","";
+    font-family: 'Cairo', sans-serif;
     direction: rtl;
     background: rgb(27 80 123 / 12%);   
     position: relative; 
@@ -295,6 +296,7 @@ footer{
     display: flex;
     justify-content: space-around;
     padding: 10px;
+    flex-wrap: wrap;
 }
 .section-one div{
     width: 30%;
@@ -312,6 +314,11 @@ footer{
     padding: 10px;
     width: 70%;
     color: #fff;
+}
+
+input[type="text"],input[type="email"],input[type="password"]:focus{
+    outline: none;
+  
 }
 input[type="submit"]{
     width: 25%;
@@ -566,9 +573,14 @@ section{
 footer .section-one ul{
     list-style: none;
     color: #979899;
+
 }
 footer .section-one ul li{
     padding: 6px  0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    
 }
 .section-two{
     padding: 10px;
@@ -627,4 +639,397 @@ color: #fff;
     to {
         transform: translateY(-12px);
     }
+}
+
+ul.footer-info > li > a{
+    color: var(--textColor);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    background-color: var(--secondColor);
+    width: 100%;
+    z-index: 5;
+    padding-right: 50px;
+    transition: all .2s linear;
+}
+ul.footer-info > li > a:hover{
+    z-index: 1;
+    font-size: 17px;
+    color: var(--mainColor);
+}
+
+ul.footer-info > li::after{
+    content: "";
+    width: 40px;
+    height: 4px;
+    border-radius: 5px;
+    border-style: none;
+    position: absolute;
+    background: var(--mainColor);
+    display: flex;
+    /* align-items: center; */
+    /* display: block; */
+    margin: 0 4px;
+    transform: translateX(-151px);
+    z-index: 2;
+}
+
+ul.footer-info > li::before{
+    content: "";
+    width: 40px;
+    height: 4px;
+    border-radius: 5px;
+    border-style: none;
+    position: absolute;
+    background: var(--mainColor);
+    display: flex;
+    /* align-items: center; */
+    /* display: block; */
+    margin: 0 4px;
+    z-index: 2;
+}
+.card-countainer{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.card{
+    width: 23%;
+    margin: 0 0 1% 1%;
+    height: 440px;
+    position: relative;
+    overflow: hidden;
+}
+.card-image{
+    position: relative;
+    width: 100%;
+    height: 430px;
+    transform: translateY(10px);
+    transition: all .3s linear;
+
+}
+.card-image p{
+    position:absolute;
+    width: 100%;
+    bottom: 26px;
+    margin: 0 4% 0 0%;
+}
+.card-image p span:nth-child(1){
+    font-size: 26px;
+    color: var(--textColor);
+    display: block;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.card-image p span:nth-child(2){
+    
+    color: var(--textColor);
+    display: block;
+ text-transform: capitalize;
+}
+.card-image:hover{
+
+    transform: translateY(0px);
+}
+div.card-image > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.alt_navbar{
+    width: 100% !important;
+    position: relative !important;
+    border-radius: 0 !important;
+    top: 0 !important;
+}
+.w-100{
+    width: 100% !important;
+}
+.member-heading{
+    margin: 2%0;
+    width: 100%;
+    color: var(--secondColor);
+}
+.member-heading .title-heading{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.member-heading .title-heading::after{
+    
+    content: "";
+    width: 40px;
+    height: 4px;
+    border-radius: 5px;
+    border-style: none;
+    position: relative;
+    background: var(--mainColor);
+    display: flex;
+
+    margin: 0 4px;
+    transform: translateX(-8px);
+}
+.member-heading .title-heading::before{
+    content: "";
+    width: 40px;
+    height: 4px;
+    border-radius: 5px;
+    border-style: none;
+    position: relative;
+    background: var(--mainColor);
+    display: flex;
+    /* align-items: center; */
+    /* display: block; */
+    margin: 0 4px;
+}
+.card-news-parent{
+    width: 23%;
+    margin: 0 0 1% 1%;
+    height:400px;
+    position: relative;
+    overflow: hidden;
+    /* background: beige; */
+}
+.card-news-parent > .news-btn{
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+.card-news{
+    width: 100%;
+    position: absolute;
+    height: 360px;
+    background-color: beige;
+    z-index: 2;
+    transform: translateY(40px);
+    transition:all .3s linear;
+}
+.card-news:hover{
+    transform: rotateY(0);
+}
+.card-news .image{
+    width: 100%;
+    height: 50%;
+}
+.card-news .image img{
+    width: 100%;
+    height: 100%;
+}
+.card-news .news-article{
+    line-height: 20px;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 4px;
+    height: 30%;
+}
+.news-publich{
+display: flex;
+height: 10%;
+align-items: center;
+padding: 4px;
+}
+.news-publich > span {
+    font-size: 12px;
+    margin-right: 6px;
+}
+.h-100{
+    height: 100% !important;
+}
+.border-top-radius{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.contact{
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #9999, -2px -2px 5px #9999;
+}
+.contact>div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-form input:nth-child(1),input:nth-child(2){
+padding: 10px;
+width: 47%;
+margin: 4% 1%;
+border-style: none;
+border-bottom: 2px solid var(--mainColor);
+}
+input:nth-child(3){
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 4% ;
+    border-style: none;
+    border-bottom: 2px solid var(--mainColor);
+}
+textarea{
+    width: 100%;
+    padding: 10px;
+        margin-bottom: 4%;
+        border-style: none;
+        border-bottom: 2px solid var(--mainColor);
+
+
+}
+.contact-form{
+    margin: 0 auto;
+    width: 80%;
+}
+.contact-form input[type="submit"]{
+    border-style: none;
+    border-radius: 25px;
+    background-color: var(--mainColor);
+    cursor: pointer;
+    color: var(--textColor);
+    font-size: 18px;
+    transition: all .3s ease-in;
+    padding: 10px;
+    width: 100%;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+.contact-form input[type="submit"]:hover{
+    background-color: var(--secondColor);
+    color: var(--textColor);
+}
+.contact-title{
+    background: var(--mainColor);
+    color: var(--textColor);
+    margin: 0%;
+    width: 20%;
+    margin: 0 auto;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.benefits-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; 
+    width: 90%;
+    margin: 0 auto;
+}
+.benefits-container > div{
+    width: 50%;
+}
+.benefits-title{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
+.spacial{
+    width: 96%;
+    background-color: #fff;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+/* 
+responsive
+*/
+@media (max-width:720px){
+    .navbar{ 
+        width: 100%;
+        top: 0;
+        border-radius: 0;
+        justify-content: space-between;
+        /* display: none !important; */
+    
+    }
+    .item{
+        display: none;
+    }
+    .container {
+        display: block;
+    }
+    .news-section{
+        width:100% ;
+    }
+    .countiner-msg-school{
+        width: 100%;
+    }
+    .char-countainer {
+        flex-wrap: wrap;
+    }
+    .char{
+        width: 50%;
+    }
+    .teacher{
+        width: 50%;
+    }
+    .customer-size {
+        width: 50%;
+        flex: none;
+    }
+
+    .customer-container{
+        overflow: hidden;
+    }
+    .section-one div{
+        width:100%
+    }
+    footer .section-one ul{
+
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;}
+    
+    .share-form {
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+    .input-share-email {
+        width: 60%;
+    }
+    input[type="submit"]{
+        width: 32%;
+    }
+.title{
+    text-align: center;
+}
+    footer .section-one ul li{
+        justify-content: space-between;
+    width: 40%;
+    margin: 0 auto;
+    }
+    /* 
+    news page rsponesive
+    
+    */
+    .card-news-parent{
+        width: 75%;
+        margin-bottom: 2%;
+    }
+    .justify-center{
+        justify-content: center;
+    }
+    /* 
+    member page responsive
+    */
+.card{
+    width: 49%;
+}
+/* 
+contact page
+
+*/
+
+.contact>div{
+width: 100%;
+}
+.contact-title{
+    width: 60%;
+}
 }
