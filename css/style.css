@@ -76,6 +76,36 @@ header style
     opacity: .3;
     z-index: 1;
 }
+.slider-overlay{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    opacity: .8;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.slider-overlay > p{
+   font-size: 30px ;
+   color: var(--textColor);
+   padding: 10px; 
+   /* width: 100%; */
+}
+.slider-overlay > span{
+    padding: 10px;
+    background-color: #fff;
+    color: black;
+    font-size: 58px;
+    /* height: 20px; */
+    height: auto;
+    opacity: 1;
+    font-weight: bold;
+    border-radius: 20px;
+}
 /* 
 body style
 */
@@ -84,6 +114,7 @@ width: 90%;
 margin: 0 auto;
 display: flex;
 justify-content: space-between;
+flex-wrap: wrap;
 }
 aside{
     background-color: #fff   ;
@@ -195,6 +226,10 @@ margin-left: 2%;
 }
 .news-section{
     width: 25%;
+    margin: 6% 0;
+}
+.margin-b-6{
+    margin-bottom: 6%;
 }
 .style{
     color: #fff;
@@ -398,6 +433,7 @@ input[type="submit"]:hover{
 }
 .circle-parent{
     position: relative;
+    padding: 10px;
 }
 .span{
     color: #fff;
@@ -481,12 +517,12 @@ text-align: center;
     align-items: center;
     font-weight: bold;
     color: var(--textColor);
-    background: var(--secondColor);
-    padding: 10px;
+    /* background: var(--secondColor); */
+    padding:0 4px;
     opacity: .9;
     transform: translate(0px, -42px);
     z-index: 2;
-    box-shadow: 0px -10px 10px #333;
+    /* box-shadow: 0px -10px 10px #333; */
     border-style: none;
 }
 .up{
@@ -673,6 +709,61 @@ ul.footer-info > li::after{
     transform: translateX(-151px);
     z-index: 2;
 }
+ul.footer-info > li:nth-child(3):after{
+    content: "";
+    width: 40px;
+    height: 4px;
+    border-radius: 5px;
+    border-style: none;
+    position: absolute;
+    background: var(--mainColor);
+    display: flex;
+ 
+    transform: translateX(-192px);
+    z-index: 2;
+}
+ul.footer-info > li:nth-child(1):after{
+    content: "";
+    width: 40px;
+    height: 4px;
+    border-radius: 5px;
+    border-style: none;
+    position: absolute;
+    background: var(--mainColor);
+    display: flex;
+   
+    margin: 0 4px;
+    transform: translateX(-116px);
+    z-index: 2;
+}
+ul.footer-info > li:nth-child(4):after{
+    content: "";
+    width: 40px;
+    height: 4px;
+    border-radius: 5px;
+    border-style: none;
+    position: absolute;
+    background: var(--mainColor);
+    display: flex;
+   
+    margin: 0 4px;
+    transform: translateX(-170px);
+    z-index: 2;
+}
+ul.footer-info > li:nth-child(5)::after{
+    content: "";
+    width: 40px;
+    height: 4px;
+    border-radius: 5px;
+    border-style: none;
+    position: absolute;
+    background: var(--mainColor);
+    display: flex;
+   
+    margin: 0 4px;
+    transform: translateX(-170px);
+    z-index: 2;
+}
 
 ul.footer-info > li::before{
     content: "";
@@ -683,8 +774,7 @@ ul.footer-info > li::before{
     position: absolute;
     background: var(--mainColor);
     display: flex;
-    /* align-items: center; */
-    /* display: block; */
+   
     margin: 0 4px;
     z-index: 2;
 }
@@ -805,9 +895,10 @@ div.card-image > img{
     z-index: 2;
     transform: translateY(40px);
     transition:all .3s linear;
+  
 }
-.card-news:hover{
-    transform: rotateY(0);
+.card-news-parent:hover .card-news{
+    transform: translateY(0);
 }
 .card-news .image{
     width: 100%;
@@ -857,7 +948,7 @@ padding: 4px;
     flex-direction: column;
     justify-content: center;
 }
-.contact-form input:nth-child(1),input:nth-child(2){
+.contact-form > input:nth-child(1),input:nth-child(2){
 padding: 10px;
 width: 47%;
 margin: 4% 1%;
@@ -936,20 +1027,194 @@ textarea{
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
 }
+.swiper-pagination-bullet{
+width: 20px ;
+height: 20px;
+}
+.swiper-pagination-bullet-active{
+    background: #fff !important;
+}
+.menu{
+    color: #fff;
+    font-size: 24px;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.justify-center{
+    justify-content: center;
+}
+
 /* 
 responsive
-*/
-@media (max-width:720px){
-    .navbar{ 
+
+/* responsive smalll mobail  */
+@media (max-width:585px){
+    /* index page */
+    /* navbar */
+        .navbar{ 
+            width: 100% !important;
+            top: 0 !important;
+            border-radius: 0 !important;
+            justify-content: space-between;
+            position: sticky !important;
+            display: block;
+            /* display: none !important; */
+        
+        }
+        .brand{
+            width: 50% !important;
+        }
+        .menu{
+            display: flex;
+            width: 15% !important;
+            justify-content: center;
+        }
+    
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height:100% !important;
+            object-fit: cover;
+          }
+        .item{
+            display: none;
+            width: 50% !important;
+        }
+        .container {
+            display: block;
+        }
+        .news-section{
+            width:100% ;
+        }
+        .countiner-msg-school{
+            width: 100%;
+        }
+        .char-countainer {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .shape{
+            width: 150px;
+            height: 150px;
+            margin: 8% auto;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .shape:hover::before{
+            width: 160px;
+            height: 160px;
+            box-shadow: 0 17px 3px #2222, 15px 17px 3px #2222;
+        
+        }
+        .char-line{
+            height: 100%;
+        }
+        .char{
+            width: 100%;
+            margin: 8px 0;
+        }
+        .teacher{
+            width: 80%;
+        }
+        .customer-size {
+            width:100%;
+            flex: none;
+        }
+    
+        .customer-container{
+            overflow: hidden;
+        }
+        .section-one div{
+            width:100%
+        }
+        /* footer */
+        footer .section-one ul{
+    
+        display: flex;
         width: 100%;
-        top: 0;
-        border-radius: 0;
+        flex-wrap: wrap;}
+        
+        .share-form {
+            flex-wrap: wrap;
+            align-items: baseline;
+        }
+        .input-share-email {
+            width: 60%;
+        }
+        input[type="submit"]{
+            width: 32%;
+        }
+    .title{
+        text-align: center;
+    }
+        footer .section-one ul li{
+            justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+        }
+        /* 
+        news page rsponesive
+        
+        */
+        .card-news-parent{
+            width: 75%;
+            margin-bottom: 2%;
+        }
+        .justify-center{
+            justify-content: center;
+        }
+        /* 
+        member page responsive
+        */
+    .card{
+        width: 49%;
+    }
+    /* 
+    contact page
+    
+    */
+    
+    .contact>div{
+    width: 100%;
+    }
+    .contact-title{
+        width: 60%;
+    }
+    }
+
+/* 
+mobile
+*/
+@media (min-width:586px) and (max-width:767px){
+    .navbar{ 
+        width: 100% !important;
+        top: 0 !important;
+        border-radius: 0 !important;
         justify-content: space-between;
+        position: sticky !important;
+        display: block;
         /* display: none !important; */
     
     }
+    .brand{
+        width: 50% !important;
+    }
+    .menu{
+        display: flex;
+        width: 15% !important;
+        justify-content: center;
+    }
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height:100% !important;
+        object-fit: cover;
+      }
     .item{
         display: none;
+        width: 50% !important;
     }
     .container {
         display: block;
@@ -965,6 +1230,10 @@ responsive
     }
     .char{
         width: 50%;
+        margin: 8px 0;
+    }
+    .char-line{
+        height: 100%;
     }
     .teacher{
         width: 50%;
@@ -972,6 +1241,20 @@ responsive
     .customer-size {
         width: 50%;
         flex: none;
+    }
+    .shape{
+        width: 150px;
+        height: 150px;
+        margin: 8% auto;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .shape:hover::before{
+        width: 160px;
+        height: 160px;
+        box-shadow: 0 17px 3px #2222, 15px 17px 3px #2222;
+    
     }
 
     .customer-container{
@@ -1032,4 +1315,135 @@ width: 100%;
 .contact-title{
     width: 60%;
 }
+}
+@media (min-width:768px) and (max-width:991px){
+
+    .navbar{ 
+        width: 100% !important;
+        top: 0 !important;
+        border-radius: 0 !important;
+        justify-content: space-between;
+        position: sticky !important;
+        display: block;
+        /* display: none !important; */
+    
+    }
+    .brand{
+        width: 50% !important;
+    }
+    .menu{
+        display: flex;
+        width: 15% !important;
+        justify-content: center;
+    }
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height:100% !important;
+        object-fit: cover;
+      }
+    .item{
+        display: none;
+        width: 50% !important;
+    }
+    .container {
+        display: block;
+    }
+    .news-section{
+        width:100% ;
+    }
+    .countiner-msg-school{
+        width: 100%;
+    }
+    .char-countainer {
+        flex-wrap: wrap;
+    }
+    .char{
+        width: 50%;
+        margin: 8px 0;
+    }
+    .char-line{
+        height: 100%;
+    }
+    .teacher{
+        width: 50%;
+    }
+    .customer-size {
+        width: 50%;
+        flex: none;
+    }
+    .shape{
+        width: 150px;
+        height: 150px;
+        margin: 8% auto;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .shape:hover::before{
+        width: 160px;
+        height: 160px;
+        box-shadow: 0 17px 3px #2222, 15px 17px 3px #2222;
+    
+    }
+
+    .customer-container{
+        overflow: hidden;
+    }
+    .section-one div{
+        width:100%
+    }
+    footer .section-one ul{
+
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;}
+    
+    .share-form {
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+    .input-share-email {
+        width: 60%;
+    }
+    input[type="submit"]{
+        width: 32%;
+    }
+.title{
+    text-align: center;
+}
+    footer .section-one ul li{
+        justify-content: space-between;
+    width: 40%;
+    margin: 0 auto;
+    }
+    /* 
+    news page rsponesive
+    
+    */
+    .card-news-parent{
+        width: 75%;
+        margin-bottom: 2%;
+    }
+    .justify-center{
+        justify-content: center;
+    }
+    /* 
+    member page responsive
+    */
+.card{
+    width: 49%;
+}
+/* 
+contact page
+
+*/
+
+.contact>div{
+width: 100%;
+}
+.contact-title{
+    width: 60%;
+}
+
 }

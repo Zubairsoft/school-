@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
     <title>news</title>
 </head>
 
@@ -28,12 +32,15 @@
    
     <ul class="navbar alt_navbar">
         <li class="brand"><a href="./index.html">مدارس الجيل الصاعد</a></li>
-        <li class="item"><a href="./index.html">الرئيسية</a></li>
-        <li class="active"><a href="news.html">الاخبار</a></li>
+        <li class="item active"><a href="./index.html">الرئيسية</a></li>
+        <li class="item"><a href="news.html">الاخبار</a></li>
         <li class="item"><a href="members.html">اعضاء المدرسة</a></li>
         <li class="item"><a href="./benefits.html">المميزات</a></li>
         <li class="item"><a href="./contact.html">تواصل معنا</a></li>
-        <li class="item"><a href="#">البحث</a></li>
+        
+      <li class="menu">  <i class="fa fa-bars" aria-hidden="true" style="color: #fff"></i></li>
+        
+
     </ul>
     <div class="container">
         <section class="w-100  margin-y-5">
@@ -273,6 +280,21 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio incidunt soluta f
             </div>
         </footer>
         <!-- end footer -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+              slidesPerView: 1,
+              spaceBetween: 30,
+              loop: true,
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+            });
+          </script>
 </body>
 <script src="js/app.js"></script>
 

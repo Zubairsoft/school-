@@ -9,6 +9,50 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+  <style>
+
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height:800px;
+      object-fit: cover;
+    }
+
+    .swiper {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
     <title>main page</title>
 </head>
 
@@ -21,13 +65,15 @@
         <li class="item active"><a href="./index.html">الرئيسية</a></li>
         <li class="item"><a href="news.html">الاخبار</a></li>
         <li class="item"><a href="members.html">اعضاء المدرسة</a></li>
-        <li class="item"><a href="#">المميزات</a></li>
-        <li class="item"><a href="#">تواصل معنا</a></li>
-        <li>القائمة</li>
+        <li class="item"><a href="./benefits.html">المميزات</a></li>
+        <li class="item"><a href="./contact.html">تواصل معنا</a></li>
+        
+      <li class="menu">  <i class="fa fa-bars" aria-hidden="true" style="color: #fff"></i></li>
         
 
     </ul>
-    <div class="slider-container">
+
+    <!-- <div class="slider-container">
 
         <div class="img-slider">
             <div class="arrow-left">
@@ -43,17 +89,31 @@
                     </div>
             </div>
 
-        </div>
+        </div>-->
+        <!-- swaper slider -->
+        <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+       
+        <div class="swiper-slide"> <div class="slider-overlay"><span>كوادر عالية</span><p>معلمين دات كفاءة عالية وخبرة كبيرة</p></div><img src="./images/benf/lacutre.jpg" alt="" srcset=""></div>
+        <div class="swiper-slide"> <div class="slider-overlay"><span>كوادر عالية</span><p>معلمين دات كفاءة عالية وخبرة كبير</p></div><img src="./images/benf/benfies.png" alt=""></div>
+        <div class="swiper-slide"> <div class="slider-overlay"><span>كوادر عالية</span><p>معلمين دات كفاءة عالية وخبرة كبير</p></div><img src="./images/benf/contact.png" alt=""></div>
+       
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
 
 
 <button class="up  animate__animated animate__bounce  animate__infinite">
 
     <i class="fas fa-arrow-up  up-down"></i>
-</button>
+</button> 
 <section>
         <div class="container">
+            
             <!--start news section-->
-            <section class=" news-section margin-y-1">
+            <section class=" news-section ">
                 <aside class="margin-y-1">
                     <div class="news-title">
                         <h3 class="animate__animated animate__bounce animate__delay-2s animate__infinite	">اخر الاخبار
@@ -81,6 +141,11 @@
             <!--end news section-->
             <!-- --start school strategy -->
             <div class="countiner-msg-school  margin-y-1">
+                <div class="member-heading">
+                    <h1 class="title-heading justify-center">
+                        استراتيجيتنا
+                    </h1>
+                </div>
                 <div class="vision">
                     <div class="margin-y-5 circle-parent">
                         <div class=" circle">
@@ -129,13 +194,76 @@
             </div>
         </div>
     </section>
+    
+    <!-- <section class="w-100  margin-y-5">
+        <div class="member-heading">
+            <h1 class="title-heading justify-center">
+                اخر الاخبار
+            </h1>
+        </div>
+       
+    <div class="card-countainer justify-center">
+     <div class="card-news-parent">
+        <div class="card-news border-top-radius">
+            <div class="image">
+                <img src="./images/FB_IMG_1656240719643.jpg" class="border-top-radius" alt="">
+            </div>
+            <div class="news-des w-100"> تدشين اختبارات الفصل الدراسيي التاني</div>
+            <div class="news-article">
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio incidunt soluta fuga, atque quam veritatis, eius aut, cumque esse sequi quae vitae odit quos voluptas excepturi necessitatibus voluptate dignissimos nulla!
+            </div>
+            <div class="news-publich">
+<i class="fas fa-calendar-day"></i><span>2022.06.1</span></div>
+
+            </div>
+            <div class="news-btn"><button class="btn margin-l-1 w-100 h-100">التفاصيل</button></div>
+
+        </div>
+
+        <div class="card-news-parent">
+            <div class="card-news border-top-radius">
+                <div class="image">
+                    <img src="./images/FB_IMG_1656240719643.jpg" class="border-top-radius" alt="">
+                </div>
+                <div class="news-des w-100"> تدشين اختبارات الفصل الدراسيي التاني</div>
+                <div class="news-article">
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio incidunt soluta fuga, atque quam veritatis, eius aut, cumque esse sequi quae vitae odit quos voluptas excepturi necessitatibus voluptate dignissimos nulla!
+                </div>
+                <div class="news-publich">
+<i class="fas fa-calendar-day"></i><span>2022.06.1</span></div>
+
+                </div>
+                <div class="news-btn"><button class="btn margin-l-1 w-100 h-100">التفاصيل</button></div>
+
+            </div>
+
+
+            <div class="card-news-parent">
+                <div class="card-news border-top-radius">
+                    <div class="image">
+                        <img src="./images/FB_IMG_1656240719643.jpg" class="border-top-radius" alt="">
+                    </div>
+                    <div class="news-des w-100"> تدشين اختبارات الفصل الدراسيي التاني</div>
+                    <div class="news-article">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio incidunt soluta fuga, atque quam veritatis, eius aut, cumque esse sequi quae vitae odit quos voluptas excepturi necessitatibus voluptate dignissimos nulla!
+                    </div>
+                    <div class="news-publich">
+    <i class="fas fa-calendar-day"></i><span>2022.06.1</span></div>
+    
+                    </div>
+                    <div class="news-btn"><button class="btn margin-l-1 w-100 h-100">التفاصيل</button></div>
+    
+                </div>
+
+    </div>
+    </section>   -->
         <!--start char section-->
         <section>
-            <!-- <div class="member-heading">
-                <h1 class="title-heading">
-                    اعضاء الادارة
+            <div class="member-heading">
+                <h1 class="title-heading justify-center margin-b-6 ">
+                    مزايانا
                 </h1>
-            </div> -->
+            </div>
         <div class="char-countainer  margin-y-5">
             <!-- <div>مزايانا</div> -->
            
@@ -178,7 +306,7 @@
         <section>
         <div class="teachers-container-section">
             <div class="member-heading">
-                <h1 class="title-heading">
+                <h1 class="title-heading justify-center">
                     اعضاء هيئة التدريس
                 </h1>
             </div>
@@ -289,7 +417,7 @@
         <!-- star costomer -->
         <section>
             <div class="member-heading">
-                <h1 class="title-heading">
+                <h1 class="title-heading justify-center">
                     اراء العملاء
                 </h1>
             </div>
@@ -377,6 +505,29 @@
             </div>
         </footer>
         <!-- end footer -->
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+         <script>
+          var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          });
+        </script>
 </body>
 <script src="js/app.js"></script>
 

@@ -1,19 +1,51 @@
 // make active to navbar
-let navbarItem=document.querySelectorAll(".navbar li:not(:first-child)")
+let navbarItem=document.querySelectorAll(".navbar>.item")
 let navbar=document.querySelector(".navbar")
 let up_btn=document.querySelector(".up")
 console.log(up_btn)
 navbarItem.forEach((e)=>{
    e.addEventListener("click",function(e){
+    
     navbarItem.forEach((element)=>{
         //  delete class active form navbarItem 
         element.classList.remove("active")
+    
     })
     // add class active to the item that make clicked
    this.classList.add("active")
    })
 })
-// ######################################################################################### فاطمة
+//###### make menu responsive
+
+let nav_toggle=document.querySelector(".menu")
+let nav_list=document.querySelectorAll(".item")
+let get_nav_list_style=getComputedStyle(nav_list[0]).display
+
+nav_toggle.addEventListener("click",()=>{
+if (nav_list[0].style.display=="block") {
+    
+        for (let i = 0; i < nav_list.length; i++) {
+            nav_list[i].style.display="none"
+    }
+
+
+}else{
+    for (let i = 0; i < nav_list.length; i++) {
+        nav_list[i].style.display="block"
+           
+        }
+}
+})
+//###############################################################################
+// card-news
+// let card_news_parent=document.querySelectorAll(".card-news-parent")
+// for (let i = 0; i < card_news_parent.length; i++) {
+//     card_news_parent[i].addEventListener("mouseover",()=>{
+//      document.querySelectorALL(".card-news").style.transform="translateY(0px)";
+//     })
+    
+// }
+// ######################################################################################### 
 window.addEventListener('scroll',function(){
 if (this.window.scrollY>50) {
     navbar.style.width="100%";
